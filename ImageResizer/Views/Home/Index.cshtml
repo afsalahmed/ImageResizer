@@ -35,11 +35,9 @@
 
 </div>
 @section scripts {
+<script type="text/javascript">
 
-
-    <script type="text/javascript">
-
-
+        //Image resize API call to 
         function resizeImage(imagestring, ratio) {
             return $.ajax({
                 url: '/api/ImageResizer/Resize',
@@ -59,9 +57,11 @@
             var filetoResize = $("#orgnial").attr('src');
             var ratio = $("#ratio").val();
 
+            //Callback function to use the resized image
             var updateImageInPdf = function (resizedImage) {
                 $("#resized").attr('src', resizedImage);
                 // write code to fill the resized image in pdf
+
             };
 
             var resizeAjax = resizeImage(filetoResize, ratio);
