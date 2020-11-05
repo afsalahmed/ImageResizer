@@ -43,8 +43,7 @@
                     convertionType: 1
                 }),
                 success: function (d) {
-                    //debugger;
-                    //return d;
+          
                     $("#resized").attr('src', d);
 
                 },
@@ -59,24 +58,7 @@
 
             var resizedFile = resizeImage(filetoResize);
             $("#resized").attr('src', resizedFile);
-            //$.ajax({
-            //    url: '/api/ImageResizer/Resize',
-            //    type: 'post',
-            //    contentType: 'application/json',
-            //    data: JSON.stringify({
-            //        imageToResize: $("#orgnial").attr('src'),
-            //        value: .3,
-            //        convertionType : 1
-            //    }),
-            //    success: function (d) {
-
-            //        $("#resized").attr('src', d);
-
-            //    },
-            //    error: function (errorThrown) {
-            //        console.log(errorThrown);
-            //    }
-            //});
+            
         })
 
 
